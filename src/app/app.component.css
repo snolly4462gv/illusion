@@ -1,0 +1,94 @@
+/* #myProgress {
+    width: 100%;
+    background-color: grey;
+}
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #4caf50;
+} */
+.main-title{
+    padding-left: 300px;
+    padding-top: 160px;
+    font-size: 80px;
+    color: white;
+}
+.main-title p{
+    padding-top: 75px;
+}
+.logo {
+    width: 100%;
+    padding: 0 0;
+    background-color:rgba(0, 0, 0, 0.715);
+}
+.icon-bar {
+    width: 150px;
+    background-color:rgba(0, 0, 0, 1);
+    position: fixed;
+    height: 100%;
+}
+
+.icon-bar a :not(.logo)  {
+    border-top: 1px solid  rgba(206, 206, 206, 0.836); 
+    display: block;
+    text-align: center;
+    padding: 30px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.icon-bar a:hover :not(.logo)  {
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.active :not(.logo)  {
+    background:  linear-gradient(to right, rgba(255,0,0,0),#020100);
+}
+
+
+.parallax {
+    /* The image used */
+
+    background-image: url('../assets/img/img_parallax.jpg');
+ 
+    /* Full height */
+    height: 100%;
+    min-height: 1100px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: 75% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+
+
+}
+.parallax.main{
+    background-position: 15% 25%;
+    background-image: url('../assets/img/geometria-64187951-photo.jpg');
+}
+.parallax.cards{
+
+    background-size: cover;
+    background-image: url('../assets/img/upRVLprQOec.jpg');
+    min-height: 1500px;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+
+.center-block{
+    position: absolute;
+    left:calc( 50% - 300px ) ;
+    top: 90%;
+    height: 600px;
+    background-color: red; 
+}
