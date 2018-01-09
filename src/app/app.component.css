@@ -12,7 +12,9 @@
 
 
 /* NAVIGATE BLOCK START*/
-
+a{
+    text-decoration: none;
+}
 .logo {
     width: 100%;
     padding-left: 15%;
@@ -52,7 +54,7 @@
 .icon-bar .tab-control:hover  {
     background-color: rgba(0, 0, 0, 0.199);
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(228, 227, 227);
 }
 
 .active {
@@ -144,9 +146,53 @@
     left:calc( 33% ) ;
     right:calc( 33% - 210px ) ;
     top: 90%;
-    height: 600px;
+    height: auto;
     background-color:#1C212A;
     color: white; 
 }
 
+.center-block p{
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 400;
+    letter-spacing: normal;
+    font-stretch: 100%;
+    font-size: 20px;
+    padding: 55px;
+    padding-bottom: 0px;
+    line-height: 160%;
+}
+
+.center-block a p{
+    padding: 15px;
+    margin: 55px;
+    text-align: center;
+    color: #ECBE00;
+    border: 1px solid #ECBE00;
+}
+.center-block a p:hover{
+      background-color: rgba(0, 0, 0, 0.199);
+    padding: 15px;
+    margin: 55px;
+    text-align: center;
+    color: #ECBE00;
+    border: 1px solid #ECBE00;
+}
 /* CENTER BLOCK END */
+
+
+/**/
+.parallax.cards .cards-content{
+    padding-top: 600px;
+    padding-left: 220px;
+    width: 100%;
+}
+.parallax.cards .cards-content h1{
+    font-family: 'Montserrat', sans-serif; 
+    padding-top:100px; 
+    font-weight: 600;
+    font-size: 70px;
+   text-align: center;
+   color: aliceblue;
+   text-shadow: 1px 1px 1px black, 0 0 1px black; /* Параметры тени */
+
+}

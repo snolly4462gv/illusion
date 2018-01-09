@@ -12,44 +12,45 @@
 <p>Scroll Up and Down this page to see the parallax scrolling effect.</p> -->
 
 
-<div class="icon-bar">
+<div class="icon-bar" id="menu">
   <a href="/">
     <img class="logo" src="../assets/img/IM GV2 2.png">
   </a>
-  <a class="tab-control" href="#">
-      <span class="active"><i class="fa fa-home"></i></span>
-      <span class="active"><p>Главная</p></span>
+  <a class="tab-control" href="#main" (click)="MenuActiveTab=0">
+      <span [ngClass]="{'active':MenuActiveTab==0}"><i class="fa fa-home"></i></span>
+      <span [ngClass]="{'active':MenuActiveTab==0}"><p>Главная</p></span>
     </a> 
-  <a class="tab-control" href="#">
-    <span><i class="fa fa-gift"></i></span>
-    <span><p>Что Вам</p></span>
+  <a class="tab-control" href="#what_for_you" (click)="MenuActiveTab=1">
+    <span [ngClass]="{'active':MenuActiveTab==1}"><i class="fa fa-gift"></i></span>
+    <span [ngClass]="{'active':MenuActiveTab==1}"><p>Что Вам</p></span>
   </a> 
-  <a class="tab-control" href="#">
-    <span><i class="fa fa-caret-square-o-right"></i></span>
-    <span><p>Портфолио</p></span>
+  <a class="tab-control" href="#" (click)="MenuActiveTab=2">
+    <span [ngClass]="{'active':MenuActiveTab==2}"><i class="fa fa-caret-square-o-right"></i></span>
+    <span [ngClass]="{'active':MenuActiveTab==2}"><p>Портфолио</p></span>
   </a> 
-  <a class="tab-control" href="#">
-      <span><i class="fa fa-user-circle"></i></span>
-      <span><p>Почему Я</p></span>
+  <a class="tab-control" href="#" (click)="MenuActiveTab=3">
+      <span [ngClass]="{'active':MenuActiveTab==3}"><i class="fa fa-user-circle"></i></span>
+      <span [ngClass]="{'active':MenuActiveTab==3}"><p>Почему Я</p></span>
     </a> 
-    <a class="tab-control" href="#">
-        <span><i class="fa fa-magic"></i></span>
-        <span><p>Услуги</p></span>
+    <a class="tab-control" href="#" (click)="MenuActiveTab=4">
+        <span [ngClass]="{'active':MenuActiveTab==4}"><i class="fa fa-magic"></i></span>
+        <span [ngClass]="{'active':MenuActiveTab==4}"><p>Услуги</p></span>
       </a> 
-      <a class="tab-control" href="#">
-          <span><i class="fa fa-address-card"></i></span>
-          <span><p>Контакты</p></span>
+      <a class="tab-control" href="#" (click)="MenuActiveTab=5">
+          <span [ngClass]="{'active':MenuActiveTab==5}"><i class="fa fa-address-card"></i></span>
+          <span [ngClass]="{'active':MenuActiveTab==5}"><p>Контакты</p></span>
         </a> 
 </div>
 
 <div>
-    <div class="center-block" >
-      Если у вас намечается свадьба, юбилей, корпоративное мероприятие, вечеринка, день рождения, наполните его волшебством! Звоните!
-      <a>Да, я хочу, чтобы о моем событии говорили с восторгом</a>
+    <div class="center-block" >      
+        <iframe style="padding-top:35px;" id="player" src="https://player.vimeo.com/video/250352302?title=false&author_name=false&byline=false&api=1&player_id=player" width="100%" height="450px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <p>Если у вас намечается свадьба, юбилей, корпоративное мероприятие, вечеринка, день рождения, наполните его волшебством! Звоните!</p>
+        <a href="#main"><p>Да, я хочу, чтобы о моем событии говорили с восторгом</p></a>
     </div> 
 
 
-<div class="parallax main">
+<div class="parallax main" id="main">
     <h1 class="main-title"><p><b style="color: #ECBE00;">Г</b>ОРБАЧЕВ</p><p>ВЛАДИСЛАВ<b style="color: #ECBE00;">.</b></p></h1>
     <h4 class="main-title add glitch">• ИЛЛЮЗИОНИСТ НОВОГО ПОКОЛЕНИЯ •</h4>
     <h2 class="text-main-title">ВОЛШЕБНОЕ ШОУ НА ВАШЕМ ПРАЗДНИКЕ</h2>
@@ -62,10 +63,10 @@
 
  
 
-<div class="parallax cards">
-  <br><h1 style="color:white">ЧТО ВЫ ПОЛУЧИТЕ ЧТО ВЫ ПОЛУЧИТЕ ЧТО ВЫ ПОЛУЧИТЕЧТО ВЫ ПОЛУЧИТЕЧТО ВЫ ПОЛУЧИТЕ</h1>
-
-
+<div class="parallax cards" id="what_for_you">
+  <div class="cards-content">
+  <h1>ЧТО ВЫ ПОЛУЧИТЕ?</h1>
+  </div>
 </div>
 
 </div>
