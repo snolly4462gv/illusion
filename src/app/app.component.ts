@@ -28,46 +28,53 @@ $(document).ready(function(){
 			top = $(id).offset().top;
 		console.log(id, top);
     //анимируем переход на расстояние - top за 1500 мс
-    if(id!="#main")top+=400;
+    if(id=="#what_for_you")top+=400;
 		$('body,html').animate({scrollTop: top}, 1400);
 	});
 });
 
 
-// var menu_selector = ".icon-bar"; 
-// function onScroll(){
-// 	var scroll_top = $(document).scrollTop();
-// 	$(menu_selector + " a").each(function(){
-// 		var hash = $(this).attr("href");
-// 		var target = $(hash);
-// 		if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
-// 			$(menu_selector + " a.active").removeClass("active");
-// 			$(this).addClass("active");
-// 		} else {
-// 			$(this).removeClass("active");
-// 		}
-// 	});
-// }
-// $(document).ready(function () {
-// 	$(document).on("scroll", onScroll);
-// 	$("a[href^=#]").click(function(e){
-// 		e.preventDefault();
-// 		$(document).off("scroll");
-// 		$(menu_selector + " a.active").removeClass("active");
-// 		$(this).addClass("active");
-// 		var hash = $(this).attr("href");
-// 		var target = $(hash);
-// 		$("html, body").animate({
-// 		    scrollTop: target.offset().top
-// 		}, 500, function(){
-// 			window.location.hash = hash;
-// 			$(document).on("scroll", onScroll);
-// 		});
-// 	});
-// });
-// $(document).ready(function(){
-// 	$(".top-menu").changeActiveNav();
-// });
+  var menu_selector = ".icon-bar"; 
+  
+  function onScroll(){
+    var scroll_top = $(document).scrollTop();
+    $(menu_selector  + " a").each(function(){
+      var hash = $(this).attr("href");
+      
+      var target = $(hash);
+     // console.log(`!`,$(this),hash,$(this).attr("href"),target);
+
+      console.log(target, target.position().top);
+      if (target.position().top <= scroll_top +150 && target.position().top + target.outerHeight() > scroll_top) {
+      //  $(menu_selector + " a span.active").addClass("active");
+      // $(a span.active).addClass("active");
+      $("a span.active").removeClass("active");
+       console.log(`this = `, $(this).context.hash);
+        var nn=$(this).context.hash;
+        $("a[href^="+nn+"] span").addClass("active");
+      } else {
+      //  $("a span.active").removeClass("active");
+      }
+    });
+  }
+
+$(document).ready(function () {
+	$(document).on("scroll", onScroll);
+	$("a[href^=#]").click(function(e){
+		e.preventDefault();
+		$(document).off("scroll");
+		$(menu_selector + " a span.active").removeClass("active");
+		$(this).addClass("active");
+		var hash = $(this).attr("href");
+		var target = $(hash);
+		$("html, body").animate({
+		    scrollTop: target.offset().top+10
+		}, 500, function(){
+			window.location.hash = hash;
+			$(document).on("scroll", onScroll);
+		});
+	});
+});
 
 
   }

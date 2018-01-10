@@ -177,6 +177,11 @@ a{
     color: #ECBE00;
     border: 1px solid #ECBE00;
 }
+
+.player .title .portrait{
+    display: none;
+}
+
 /* CENTER BLOCK END */
 
 
