@@ -34,7 +34,7 @@ export class AppComponent {
           top = $(id).offset().top;
         console.log(id, top);
         //анимируем переход на расстояние - top за 1500 мс
-        if(id=="#what_for_you")top+=400;
+       // if(id=="#what_for_you")top+=400;
         $('body,html').animate({scrollTop: top}, 1400);
       });
     });
@@ -64,24 +64,23 @@ export class AppComponent {
 
             if(nn=="#what_for_you") {
               var count = 1;
-              setInterval(()=>{
+              let timer = setInterval(()=>{
                 
               let elem = document.getElementById("myBar"+count); 
               let elemPr = document.getElementById("myPrProc"+count); 
-             
               let width = $(elem).width();
-               setInterval(()=>{
+               var timer2 = setInterval(()=>{
                 {
-                  if (width < 100)  {
+                  if (width < 100||(elemPr&&elemPr.id&&elemPr.id=="myPrProc1"&&width<106 ) )  {
                       width++; 
                       elem.style.width = width + '%';  
-                      $(elemPr).text(width+"%"); 
+                      $(elemPr).text(width+"%");                 
                   }
-                  
-              }
-              
+                  else clearInterval(timer2);
+              }           
             }, 10);
-            if(count<=5)count++;
+            if(count<5)count++;
+            else clearInterval(timer);
             },800)
               
             }

@@ -178,13 +178,13 @@ a{
 
 /**/
 .parallax.cards .cards-content{
-    padding-top: 600px;
+    padding-top: 640px;
     padding-left: 220px;
     width: 100%;
 }
 .parallax.cards .cards-content h1{
     font-family: 'Montserrat', sans-serif; 
-    padding-top:100px; 
+    padding-top:120px; 
     font-weight: 600;
     font-size: 70px;
    text-align: center;
@@ -203,8 +203,14 @@ a{
     background-color: #00000000;
 }
 .parallax.cards .cards-content .progress span{
-    display: inline-block;
-    color: white;
+    font-family: 'Montserrat', sans-serif; 
+    padding-left:20px; 
+    font-weight: 100;
+    font-size: 25px;
+   text-align: center;
+   color: aliceblue;
+   text-shadow: 1px 1px 1px black, 0 0 1px black; /* Параметры тени */
+
 }
 
  #myProgress1 {
@@ -218,8 +224,8 @@ a{
     background-color: #4caf50;
 } 
 #myProgress2 {
-    width: 100%;
-    background-color: grey;
+    width: 95%;
+    background-color: rgba(128, 128, 128, 0);
 }
 #myBar2 {
     width: 1%;
@@ -227,11 +233,31 @@ a{
     background-color: #4caf50;
 }
 #myProgress3 {
-    width: 100%;
-    background-color: grey;
+    width: 95%;
+    background-color: rgba(128, 128, 128, 0);
 }
 #myBar3 {
     width: 1%;
     height: 30px;
     background-color: #4caf50;
 }  
+
+#myProgress4 {
+    width: 95%;
+    background-color: rgba(128, 128, 128, 0);
+}
+#myBar4 {
+    width: 1%;
+    height: 30px;
+    background-color: #4caf50;
+} 
+
+#myProgress5 {
+    width: 95%;
+    background-color: rgba(128, 128, 128, 0);
+}
+#myBar5 {
+    width: 1%;
+    height: 30px;
+    background-color: #4caf50;
+} 
