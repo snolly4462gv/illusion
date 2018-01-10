@@ -76,11 +76,12 @@ export class AppComponent {
                       elem.style.width = width + '%';  
                       $(elemPr).text(width+"%");                 
                   }
-                  else clearInterval(timer2);
+                  else {clearInterval(timer2);
+                    let width = 1;}
               }           
             }, 10);
             if(count<5)count++;
-            else clearInterval(timer);
+            else {clearInterval(timer);let width = 1;}
             },800)
               
             }
