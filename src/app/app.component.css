@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-/* #myProgress {
-    width: 100%;
-    background-color: grey;
-}
-#myBar {
-    width: 1%;
-    height: 30px;
-    background-color: #4caf50;
-} */
+
 
 
 
@@ -116,8 +108,6 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
    
-
-
 }
 .parallax.main{
     background-position: 15% 25%;
@@ -202,3 +192,46 @@ a{
    text-shadow: 1px 1px 1px black, 0 0 1px black; /* Параметры тени */
 
 }
+
+.parallax.cards .cards-content .progress{
+    padding-top: 30px;
+    padding-left:calc(20% + 215px);
+    padding-left: 20%; 
+    width: 80%;
+    align-content: center;
+    height: auto;
+    background-color: #00000000;
+}
+.parallax.cards .cards-content .progress span{
+    display: inline-block;
+    color: white;
+}
+
+ #myProgress1 {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(128, 128, 128, 0);
+}
+#myBar1 {
+    width: 1%;
+    height: 30px;
+    background-color: #4caf50;
+} 
+#myProgress2 {
+    width: 100%;
+    background-color: grey;
+}
+#myBar2 {
+    width: 1%;
+    height: 30px;
+    background-color: #4caf50;
+}
+#myProgress3 {
+    width: 100%;
+    background-color: grey;
+}
+#myBar3 {
+    width: 1%;
+    height: 30px;
+    background-color: #4caf50;
+}  
