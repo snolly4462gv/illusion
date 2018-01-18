@@ -12,11 +12,12 @@ export class AppComponent {
   firstLoad:boolean = true;
   title = 'app works!';
   MenuActiveTab:number = 0;
+  slideIndex = 1;
   constructor(){
 
      this.addScroll();
 
-
+     this.showSlides(this.slideIndex);
   }
 
 
@@ -53,7 +54,7 @@ export class AppComponent {
          // console.log(`!`,$(this),hash,$(this).attr("href"),target);
     
           console.log(target, target.position().top);
-          if (target.position().top <= scroll_top +150 && target.position().top + target.outerHeight() > scroll_top) {
+          if (target.position().top <= scroll_top +320 && target.position().top + target.outerHeight() > scroll_top) {
           //  $(menu_selector + " a span.active").addClass("active");
           // $(a span.active).addClass("active");
           $("a span.active").removeClass("active");
@@ -112,10 +113,42 @@ export class AppComponent {
   }
 
 
-   move() {
-   
+  openModal() {
+    document.getElementById('myModal').style.display = "block";
   }
-
+  
+   closeModal() {
+    document.getElementById('myModal').style.display = "none";
+  }
+  
+ 
+ 
+  
+   plusSlides(n) {
+    this.showSlides(this.slideIndex += n);
+  }
+  
+   currentSlide(n) {
+    this.showSlides(this.slideIndex = n);
+  }
+  
+   showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+     var captionText = document.getElementById("caption");
+     if (n > slides.length) {this.slideIndex = 1}
+     if (n < 1) {this.slideIndex = slides.length}
+  //   for (i = 0; i < slides.length; i++) {
+  //       //slides.item[i].style.display = "none";
+  //   }
+  //   for (i = 0; i < dots.length; i++) {
+  //       dots[i].className = dots[i].className.replace(" active", "");
+  //   }
+  //  // slides.item[this.slideIndex-1].style.display = "block";
+  //   dots[this.slideIndex-1].className += " active";
+  //   captionText.innerHTML = dots.item[this.slideIndex-1].alt;
+  }
 
 
 
