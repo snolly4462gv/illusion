@@ -244,7 +244,7 @@ a{
 
 #myProgress4 {
     width: 95%;
-    background-color: rgba(128, 128, 128, 0);
+    background-color: rgba(128, 128, 128, 0.034);
 }
 #myBar4 {
     width: 1%;
